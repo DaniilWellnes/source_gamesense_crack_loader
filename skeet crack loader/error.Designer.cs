@@ -54,7 +54,7 @@ namespace gamesense_crack
             // 
             this.icon_error.BackColor = System.Drawing.Color.Transparent;
             this.icon_error.BaseColor = System.Drawing.Color.Black;
-            this.icon_error.Image = ((System.Drawing.Image)(resources.GetObject("icon_error.Image")));
+            this.icon_error.Image = global::gamesense_crack.Properties.Resources.error;
             this.icon_error.Location = new System.Drawing.Point(12, 12);
             this.icon_error.Name = "icon_error";
             this.icon_error.Size = new System.Drawing.Size(56, 43);

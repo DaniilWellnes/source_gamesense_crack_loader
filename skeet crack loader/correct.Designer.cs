@@ -53,7 +53,7 @@ namespace gamesense_crack
             // 
             this.inject_correct.BackColor = System.Drawing.Color.Transparent;
             this.inject_correct.BaseColor = System.Drawing.Color.Black;
-            this.inject_correct.Image = ((System.Drawing.Image)(resources.GetObject("inject_correct.Image")));
+            this.inject_correct.Image = global::gamesense_crack.Properties.Resources.correct;
             this.inject_correct.Location = new System.Drawing.Point(12, 13);
             this.inject_correct.Name = "inject_correct";
             this.inject_correct.Size = new System.Drawing.Size(56, 43);

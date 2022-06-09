@@ -14,6 +14,9 @@ namespace gamesense_crack
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
+
+
+
         public vhod()
         {
             InitializeComponent();
@@ -49,8 +52,10 @@ namespace gamesense_crack
 
         private async void log_in_Click(object sender, EventArgs e)
         {
-            if (login.Text == "1" && password.Text == "1")
+            if (password.Text == "123")
             {
+                injector.Nickname_class.Text = login.Text;
+
                 this.Hide();
                 var vhod = new main();
                 vhod.Closed += (s, args) => this.Close();

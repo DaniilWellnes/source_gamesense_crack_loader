@@ -55,7 +55,7 @@ namespace gamesense_crack
             this.gunaTransfarantPictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.gunaTransfarantPictureBox1.BaseColor = System.Drawing.Color.Black;
             this.gunaTransfarantPictureBox1.Enabled = false;
-            this.gunaTransfarantPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaTransfarantPictureBox1.Image")));
+            this.gunaTransfarantPictureBox1.Image = global::gamesense_crack.Properties.Resources.skeet_icon_menu;
             this.gunaTransfarantPictureBox1.Location = new System.Drawing.Point(32, 27);
             this.gunaTransfarantPictureBox1.Name = "gunaTransfarantPictureBox1";
             this.gunaTransfarantPictureBox1.Size = new System.Drawing.Size(147, 78);
@@ -151,7 +151,7 @@ namespace gamesense_crack
             this.gunaTransfarantPictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.gunaTransfarantPictureBox2.BaseColor = System.Drawing.Color.Black;
             this.gunaTransfarantPictureBox2.Enabled = false;
-            this.gunaTransfarantPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("gunaTransfarantPictureBox2.Image")));
+            this.gunaTransfarantPictureBox2.Image = global::gamesense_crack.Properties.Resources.icon_user;
             this.gunaTransfarantPictureBox2.Location = new System.Drawing.Point(97, 177);
             this.gunaTransfarantPictureBox2.Name = "gunaTransfarantPictureBox2";
             this.gunaTransfarantPictureBox2.Size = new System.Drawing.Size(38, 50);
@@ -164,7 +164,7 @@ namespace gamesense_crack
             this.gunaTransfarantPictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.gunaTransfarantPictureBox3.BaseColor = System.Drawing.Color.Black;
             this.gunaTransfarantPictureBox3.Enabled = false;
-            this.gunaTransfarantPictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("gunaTransfarantPictureBox3.Image")));
+            this.gunaTransfarantPictureBox3.Image = global::gamesense_crack.Properties.Resources.icon_passeord;
             this.gunaTransfarantPictureBox3.Location = new System.Drawing.Point(97, 248);
             this.gunaTransfarantPictureBox3.Name = "gunaTransfarantPictureBox3";
             this.gunaTransfarantPictureBox3.Size = new System.Drawing.Size(38, 50);
@@ -209,7 +209,7 @@ namespace gamesense_crack
             this.close_pass.FocusedColor = System.Drawing.Color.Empty;
             this.close_pass.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.close_pass.ForeColor = System.Drawing.Color.White;
-            this.close_pass.Image = ((System.Drawing.Image)(resources.GetObject("close_pass.Image")));
+            this.close_pass.Image = global::gamesense_crack.Properties.Resources.close_pass;
             this.close_pass.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.close_pass.ImageSize = new System.Drawing.Size(35, 35);
             this.close_pass.Location = new System.Drawing.Point(456, 254);
@@ -236,7 +236,7 @@ namespace gamesense_crack
             this.open_pass.FocusedColor = System.Drawing.Color.Empty;
             this.open_pass.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.open_pass.ForeColor = System.Drawing.Color.White;
-            this.open_pass.Image = ((System.Drawing.Image)(resources.GetObject("open_pass.Image")));
+            this.open_pass.Image = global::gamesense_crack.Properties.Resources.open_pass;
             this.open_pass.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.open_pass.ImageSize = new System.Drawing.Size(35, 35);
             this.open_pass.Location = new System.Drawing.Point(456, 254);

@@ -151,6 +151,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="gamesense.ico" />
+    <None Include="Res\error.png" />
+    <None Include="Res\correct.png" />
+    <None Include="Res\undetect.png" />
+    <None Include="Res\close_pass.png" />
+    <None Include="Res\open_pass.png" />
+    <None Include="Res\icon_passeord.png" />
+    <None Include="Res\load_screen.gif" />
+    <None Include="Res\list.png" />
+    <None Include="Res\calendar.png" />
+    <None Include="Res\icon_user.png" />
+    <None Include="Res\skeet_icon_menu.png" />
+    <None Include="Res\detect.png" />
+    <None Include="Res\text_background.jpg" />
+    <None Include="Res\background.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">

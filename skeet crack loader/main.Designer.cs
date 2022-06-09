@@ -39,9 +39,10 @@ namespace gamesense_crack
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
+            this.cheat_detect = new Guna.UI.WinForms.GunaPictureBox();
             this.cheat_status = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.cheat_undetect = new System.Windows.Forms.PictureBox();
             this.gunaPanel3 = new Guna.UI.WinForms.GunaPanel();
             this.last_upd = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,15 +53,21 @@ namespace gamesense_crack
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.main_panel = new Guna.UI.WinForms.GunaPanel();
+            this.pic_load = new System.Windows.Forms.PictureBox();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.gunaPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cheat_detect)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cheat_undetect)).BeginInit();
             this.gunaPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.gunaPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.main_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_load)).BeginInit();
             this.SuspendLayout();
             // 
             // cheat_load
@@ -76,7 +83,7 @@ namespace gamesense_crack
             this.cheat_load.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
             this.cheat_load.Image = null;
             this.cheat_load.ImageSize = new System.Drawing.Size(20, 20);
-            this.cheat_load.Location = new System.Drawing.Point(130, 388);
+            this.cheat_load.Location = new System.Drawing.Point(87, 357);
             this.cheat_load.Name = "cheat_load";
             this.cheat_load.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(175)))), ((int)(((byte)(110)))));
             this.cheat_load.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -94,8 +101,8 @@ namespace gamesense_crack
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.Enabled = false;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(48, 37);
+            this.pictureBox1.Image = global::gamesense_crack.Properties.Resources.skeet_icon_menu;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 13);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(148, 77);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -107,7 +114,7 @@ namespace gamesense_crack
             this.gunaSeparator1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaSeparator1.BackgroundImage")));
             this.gunaSeparator1.Enabled = false;
             this.gunaSeparator1.LineColor = System.Drawing.Color.Gray;
-            this.gunaSeparator1.Location = new System.Drawing.Point(44, 123);
+            this.gunaSeparator1.Location = new System.Drawing.Point(1, 96);
             this.gunaSeparator1.Name = "gunaSeparator1";
             this.gunaSeparator1.Size = new System.Drawing.Size(535, 10);
             this.gunaSeparator1.TabIndex = 3;
@@ -118,7 +125,7 @@ namespace gamesense_crack
             this.gunaPanel1.Controls.Add(this.account_id);
             this.gunaPanel1.Controls.Add(this.label1);
             this.gunaPanel1.Controls.Add(this.pictureBox2);
-            this.gunaPanel1.Location = new System.Drawing.Point(61, 175);
+            this.gunaPanel1.Location = new System.Drawing.Point(18, 148);
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(193, 80);
             this.gunaPanel1.TabIndex = 4;
@@ -131,9 +138,9 @@ namespace gamesense_crack
             this.account_id.Image = ((System.Drawing.Image)(resources.GetObject("account_id.Image")));
             this.account_id.Location = new System.Drawing.Point(66, 39);
             this.account_id.Name = "account_id";
-            this.account_id.Size = new System.Drawing.Size(14, 17);
+            this.account_id.Size = new System.Drawing.Size(23, 17);
             this.account_id.TabIndex = 1;
-            this.account_id.Text = "1";
+            this.account_id.Text = "|||";
             this.account_id.Click += new System.EventHandler(this.account_id_Click);
             // 
             // label1
@@ -151,7 +158,7 @@ namespace gamesense_crack
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Image = global::gamesense_crack.Properties.Resources.icon_user;
             this.pictureBox2.Location = new System.Drawing.Point(1, 22);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 34);
@@ -162,13 +169,26 @@ namespace gamesense_crack
             // gunaPanel2
             // 
             this.gunaPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaPanel2.BackgroundImage")));
+            this.gunaPanel2.Controls.Add(this.cheat_detect);
             this.gunaPanel2.Controls.Add(this.cheat_status);
             this.gunaPanel2.Controls.Add(this.label2);
-            this.gunaPanel2.Controls.Add(this.pictureBox3);
-            this.gunaPanel2.Location = new System.Drawing.Point(61, 275);
+            this.gunaPanel2.Controls.Add(this.cheat_undetect);
+            this.gunaPanel2.Location = new System.Drawing.Point(19, 248);
             this.gunaPanel2.Name = "gunaPanel2";
             this.gunaPanel2.Size = new System.Drawing.Size(193, 80);
             this.gunaPanel2.TabIndex = 4;
+            // 
+            // cheat_detect
+            // 
+            this.cheat_detect.BackgroundImage = global::gamesense_crack.Properties.Resources.text_background;
+            this.cheat_detect.BaseColor = System.Drawing.Color.White;
+            this.cheat_detect.Image = global::gamesense_crack.Properties.Resources.detect;
+            this.cheat_detect.Location = new System.Drawing.Point(33, 39);
+            this.cheat_detect.Name = "cheat_detect";
+            this.cheat_detect.Size = new System.Drawing.Size(27, 29);
+            this.cheat_detect.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cheat_detect.TabIndex = 3;
+            this.cheat_detect.TabStop = false;
             // 
             // cheat_status
             // 
@@ -195,16 +215,16 @@ namespace gamesense_crack
             this.label2.TabIndex = 1;
             this.label2.Text = "Cheat status:";
             // 
-            // pictureBox3
+            // cheat_undetect
             // 
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1, 22);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 34);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
+            this.cheat_undetect.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cheat_undetect.BackgroundImage")));
+            this.cheat_undetect.Image = global::gamesense_crack.Properties.Resources.undetect;
+            this.cheat_undetect.Location = new System.Drawing.Point(0, 22);
+            this.cheat_undetect.Name = "cheat_undetect";
+            this.cheat_undetect.Size = new System.Drawing.Size(32, 34);
+            this.cheat_undetect.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cheat_undetect.TabIndex = 0;
+            this.cheat_undetect.TabStop = false;
             // 
             // gunaPanel3
             // 
@@ -212,7 +232,7 @@ namespace gamesense_crack
             this.gunaPanel3.Controls.Add(this.last_upd);
             this.gunaPanel3.Controls.Add(this.label3);
             this.gunaPanel3.Controls.Add(this.pictureBox4);
-            this.gunaPanel3.Location = new System.Drawing.Point(328, 175);
+            this.gunaPanel3.Location = new System.Drawing.Point(286, 148);
             this.gunaPanel3.Name = "gunaPanel3";
             this.gunaPanel3.Size = new System.Drawing.Size(228, 80);
             this.gunaPanel3.TabIndex = 4;
@@ -245,7 +265,7 @@ namespace gamesense_crack
             // pictureBox4
             // 
             this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Image = global::gamesense_crack.Properties.Resources.calendar;
             this.pictureBox4.Location = new System.Drawing.Point(1, 22);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 34);
@@ -267,7 +287,7 @@ namespace gamesense_crack
             this.close_skeet.ForeColor = System.Drawing.Color.White;
             this.close_skeet.Image = null;
             this.close_skeet.ImageSize = new System.Drawing.Size(20, 20);
-            this.close_skeet.Location = new System.Drawing.Point(518, 62);
+            this.close_skeet.Location = new System.Drawing.Point(474, 36);
             this.close_skeet.Name = "close_skeet";
             this.close_skeet.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(24)))), ((int)(((byte)(38)))));
             this.close_skeet.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -287,7 +307,7 @@ namespace gamesense_crack
             this.gunaPanel4.Controls.Add(this.sub_expires_in);
             this.gunaPanel4.Controls.Add(this.label7);
             this.gunaPanel4.Controls.Add(this.pictureBox5);
-            this.gunaPanel4.Location = new System.Drawing.Point(328, 275);
+            this.gunaPanel4.Location = new System.Drawing.Point(287, 248);
             this.gunaPanel4.Name = "gunaPanel4";
             this.gunaPanel4.Size = new System.Drawing.Size(228, 80);
             this.gunaPanel4.TabIndex = 4;
@@ -300,9 +320,9 @@ namespace gamesense_crack
             this.sub_expires_in.Image = ((System.Drawing.Image)(resources.GetObject("sub_expires_in.Image")));
             this.sub_expires_in.Location = new System.Drawing.Point(66, 39);
             this.sub_expires_in.Name = "sub_expires_in";
-            this.sub_expires_in.Size = new System.Drawing.Size(71, 17);
+            this.sub_expires_in.Size = new System.Drawing.Size(23, 17);
             this.sub_expires_in.TabIndex = 1;
-            this.sub_expires_in.Text = "27 DAYS";
+            this.sub_expires_in.Text = "|||";
             this.sub_expires_in.Click += new System.EventHandler(this.sub_expires_in_Click);
             // 
             // label7
@@ -320,7 +340,7 @@ namespace gamesense_crack
             // pictureBox5
             // 
             this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Image = global::gamesense_crack.Properties.Resources.list;
             this.pictureBox5.Location = new System.Drawing.Point(1, 22);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(32, 34);
@@ -332,20 +352,48 @@ namespace gamesense_crack
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // main_panel
+            // 
+            this.main_panel.BackgroundImage = global::gamesense_crack.Properties.Resources.text_background;
+            this.main_panel.Controls.Add(this.gunaSeparator1);
+            this.main_panel.Controls.Add(this.cheat_load);
+            this.main_panel.Controls.Add(this.gunaPanel2);
+            this.main_panel.Controls.Add(this.close_skeet);
+            this.main_panel.Controls.Add(this.gunaPanel1);
+            this.main_panel.Controls.Add(this.pictureBox1);
+            this.main_panel.Controls.Add(this.gunaPanel4);
+            this.main_panel.Controls.Add(this.gunaPanel3);
+            this.main_panel.Location = new System.Drawing.Point(44, 27);
+            this.main_panel.Name = "main_panel";
+            this.main_panel.Size = new System.Drawing.Size(539, 428);
+            this.main_panel.TabIndex = 6;
+            // 
+            // pic_load
+            // 
+            this.pic_load.BackgroundImage = global::gamesense_crack.Properties.Resources.text_background;
+            this.pic_load.Image = global::gamesense_crack.Properties.Resources.load_screen;
+            this.pic_load.Location = new System.Drawing.Point(3, 12);
+            this.pic_load.Name = "pic_load";
+            this.pic_load.Size = new System.Drawing.Size(38, 51);
+            this.pic_load.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_load.TabIndex = 6;
+            this.pic_load.TabStop = false;
+            this.pic_load.Click += new System.EventHandler(this.pic_load_Click);
+            // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 2600;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::gamesense_crack.Properties.Resources.text_background;
             this.ClientSize = new System.Drawing.Size(618, 493);
-            this.Controls.Add(this.close_skeet);
-            this.Controls.Add(this.gunaPanel4);
-            this.Controls.Add(this.gunaPanel3);
-            this.Controls.Add(this.gunaPanel2);
-            this.Controls.Add(this.gunaPanel1);
-            this.Controls.Add(this.gunaSeparator1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.cheat_load);
+            this.Controls.Add(this.pic_load);
+            this.Controls.Add(this.main_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "main";
@@ -358,13 +406,16 @@ namespace gamesense_crack
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.gunaPanel2.ResumeLayout(false);
             this.gunaPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cheat_detect)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cheat_undetect)).EndInit();
             this.gunaPanel3.ResumeLayout(false);
             this.gunaPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.gunaPanel4.ResumeLayout(false);
             this.gunaPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.main_panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pic_load)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -378,7 +429,7 @@ namespace gamesense_crack
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaPanel gunaPanel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox cheat_undetect;
         private Guna.UI.WinForms.GunaPanel gunaPanel3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -391,5 +442,9 @@ namespace gamesense_crack
         private System.Windows.Forms.Label cheat_status;
         private System.Windows.Forms.Label last_upd;
         private System.Windows.Forms.Timer timer1;
+        private Guna.UI.WinForms.GunaPanel main_panel;
+        private System.Windows.Forms.PictureBox pic_load;
+        private System.Windows.Forms.Timer timer2;
+        private Guna.UI.WinForms.GunaPictureBox cheat_detect;
     }
 }
