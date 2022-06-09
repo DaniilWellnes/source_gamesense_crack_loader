@@ -12,8 +12,8 @@ namespace gamesense_crack
 {
     public partial class main : Form
     {
-        string dll_link = "https://github.com/DaniilWellnes/test/blob/main/suphire.dll";
-        string dll_name = "suphire";
+        string dll_link = "https://github.com/DaniilWellnes/cloud_loader/raw/main/legendware.dll";
+        string dll_name = "legendware";
         int time_to_wait = 35000;
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -25,7 +25,6 @@ namespace gamesense_crack
         public main()
         {
             InitializeComponent();
-            cheat_load.Text = "START LOAD";
             this.MouseDown += new MouseEventHandler((o, e) =>
             {
                 base.Capture = false;
@@ -44,7 +43,7 @@ namespace gamesense_crack
 
         private void main_Load(object sender, EventArgs e)
         {
-
+            cheat_load.Text = "START LOAD";
         }
 
         private async void cheat_load_Click(object sender, EventArgs e)
@@ -97,20 +96,11 @@ namespace gamesense_crack
             Application.Exit();
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void cheat_status_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void gunaPanel3_Paint(object sender, PaintEventArgs e)
         {
@@ -137,11 +127,6 @@ namespace gamesense_crack
             {
                 Application.Exit();
             }
-        }
-
-        private void cheat_inj_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -76,7 +76,7 @@ namespace gamesense_crack
             this.cheat_load.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
             this.cheat_load.Image = null;
             this.cheat_load.ImageSize = new System.Drawing.Size(20, 20);
-            this.cheat_load.Location = new System.Drawing.Point(130, 391);
+            this.cheat_load.Location = new System.Drawing.Point(130, 388);
             this.cheat_load.Name = "cheat_load";
             this.cheat_load.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(175)))), ((int)(((byte)(110)))));
             this.cheat_load.OnHoverBorderColor = System.Drawing.Color.Black;
