@@ -88,22 +88,17 @@ namespace gamesense_crack
 
                 account_id.Text = Environment.UserName;
 
-                last_upd.Text = w_last_upd_date.DownloadString("https://raw.githubusercontent.com/DaniilWellnes/Cloud-Loader/main/addition/data.txt");
+                last_upd.Text = w_last_upd_date.DownloadString("https://raw.githubusercontent.com/DaniilWellnes/gamesense_crack_loader/main/addition/data.txt");
 
-                string cheat_status_text = w_cheat_status_text.DownloadString("https://raw.githubusercontent.com/DaniilWellnes/Cloud-Loader/main/addition/cheat_status.txt");
+                string cheat_status_text = w_cheat_status_text.DownloadString("https://raw.githubusercontent.com/DaniilWellnes/gamesense_crack_loader/main/addition/cheat_status.txt");
 
-                if (cheat_status_text.Contains("1"))
+                if (cheat_status_text.Contains("0"))
                 {
                     cheat_status.Text = "UNDETECT";
                     cheat_status.ForeColor = System.Drawing.Color.Green;
                     cheat_undetect.Visible = true;
                     cheat_undetect.Enabled = true;
                     cheat_load.Enabled = true;
-                    /*                    if (w_sub_expires_in.DownloadString("https://raw.githubusercontent.com/DaniilWellnes/Cloud-Loader/main/addition/sub.txt").Contains("0 days"))
-                                        {
-                                            load_cheat.Enabled = false;
-                                        }
-                                        else load_cheat.Enabled = true;*/
                 }
                 else
                 {
