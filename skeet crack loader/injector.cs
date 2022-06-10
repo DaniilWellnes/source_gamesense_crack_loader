@@ -3,14 +3,9 @@ using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Text;
+
 namespace injector
 {
-    static class Nickname_class
-    {
-        public static string Text;
-    }
-
-
     public class BasicInject
     {
         [DllImport("kernel32.dll")]

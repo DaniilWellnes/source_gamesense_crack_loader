@@ -43,25 +43,35 @@ namespace gamesense_crack
 
         private void main_Load(object sender, EventArgs e)
         {
-            pic_load.Enabled = true;
-            pic_load.Visible = true;
-            pic_load.Location = new Point(204, 160);
-            pic_load.Size = new Size(197, 146);
-            main_panel.Visible = false;
-            main_panel.Enabled = false;
-            cheat_load.Enabled = false;
-            cheat_load.Text = "START LOAD";
+            pic_load.Enabled = true; pic_load.Visible = true;
+            pic_load.Location = new Point(204, 160); pic_load.Size = new Size(197, 146);
+            main_panel.Visible = false; main_panel.Enabled = false;
+            cheat_load.Enabled = false; cheat_load.Text = "START LOAD";
             sub_expires_in.Text = "LIFETIME";
-            /*            account_id.Text = injector.Nickname_class.Text;*/
 
-            cheat_undetect.Enabled = false;
-            cheat_undetect.Visible = false;
-            cheat_detect.Enabled = false;
-            cheat_detect.Visible = false;
-            cheat_undetect.Location = new Point(0, 22);
-            cheat_undetect.Size = new Size(32, 34);
-            cheat_detect.Location = new Point(0, 22);
-            cheat_detect.Size = new Size(32, 34);
+            cheat_undetect.Enabled = false; cheat_undetect.Visible = false;
+            cheat_detect.Enabled = false; cheat_detect.Visible = false;
+            cheat_undetect.Location = new Point(0, 22); cheat_undetect.Size = new Size(32, 34);
+            cheat_detect.Location = new Point(0, 22); cheat_detect.Size = new Size(32, 34);
+            pic_icon.Enabled = false; pic_icon.Visible = false;
+            close_skeet.Visible = false; close_skeet.Enabled = false;
+
+            WebClient w_cheat_status_text = new WebClient();
+            WebClient w_last_upd_date = new WebClient();
+            last_upd.Text = w_last_upd_date.DownloadString("https://raw.githubusercontent.com/DaniilWellnes/gamesense_crack_loader/main/addition/data.txt");
+            string cheat_status_text = w_cheat_status_text.DownloadString("https://raw.githubusercontent.com/DaniilWellnes/gamesense_crack_loader/main/addition/cheat_status.txt");
+            if (cheat_status_text.Contains("0"))
+            {
+                cheat_status.Text = "UNDETECT"; cheat_status.ForeColor = System.Drawing.Color.Green;
+                cheat_undetect.Visible = true; cheat_undetect.Enabled = true;
+                cheat_load.Enabled = true;
+            }
+            else
+            {
+                cheat_status.Text = "DETECT"; cheat_status.ForeColor = System.Drawing.Color.Red;
+                cheat_detect.Visible = true; cheat_detect.Enabled = true;
+            }
+
         }
 
         public void StartTheQuiz()
@@ -83,35 +93,11 @@ namespace gamesense_crack
             }
             else
             {
-                WebClient w_cheat_status_text = new WebClient();
-                WebClient w_last_upd_date = new WebClient();
-
                 account_id.Text = Environment.UserName;
-
-                last_upd.Text = w_last_upd_date.DownloadString("https://raw.githubusercontent.com/DaniilWellnes/gamesense_crack_loader/main/addition/data.txt");
-
-                string cheat_status_text = w_cheat_status_text.DownloadString("https://raw.githubusercontent.com/DaniilWellnes/gamesense_crack_loader/main/addition/cheat_status.txt");
-
-                if (cheat_status_text.Contains("0"))
-                {
-                    cheat_status.Text = "UNDETECT";
-                    cheat_status.ForeColor = System.Drawing.Color.Green;
-                    cheat_undetect.Visible = true;
-                    cheat_undetect.Enabled = true;
-                    cheat_load.Enabled = true;
-                }
-                else
-                {
-                    cheat_status.Text = "DETECT";
-                    cheat_status.ForeColor = System.Drawing.Color.Red;
-                    cheat_detect.Visible = true;
-                    cheat_detect.Enabled = true;
-                }
-
-                pic_load.Visible = false;
-                pic_load.Enabled = false;
-                main_panel.Visible = true;
-                main_panel.Enabled = true;
+                pic_load.Visible = false; pic_load.Enabled = false;
+                pic_icon.Enabled = false; pic_icon.Visible = true;
+                main_panel.Visible = true; main_panel.Enabled = true;
+                close_skeet.Visible = true; close_skeet.Enabled = true;
             }
         }
 

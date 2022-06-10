@@ -54,8 +54,6 @@ namespace gamesense_crack
         {
             if (password.Text == "123")
             {
-                injector.Nickname_class.Text = login.Text;
-
                 this.Hide();
                 var vhod = new main();
                 vhod.Closed += (s, args) => this.Close();
