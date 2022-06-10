@@ -246,9 +246,9 @@ namespace gamesense_crack
             this.last_upd.Image = ((System.Drawing.Image)(resources.GetObject("last_upd.Image")));
             this.last_upd.Location = new System.Drawing.Point(66, 39);
             this.last_upd.Name = "last_upd";
-            this.last_upd.Size = new System.Drawing.Size(153, 17);
+            this.last_upd.Size = new System.Drawing.Size(23, 17);
             this.last_upd.TabIndex = 2;
-            this.last_upd.Text = "13/09/2021 AT 18:10";
+            this.last_upd.Text = "|||";
             // 
             // label3
             // 
@@ -372,7 +372,7 @@ namespace gamesense_crack
             // 
             this.pic_load.BackgroundImage = global::gamesense_crack.Properties.Resources.text_background;
             this.pic_load.Image = global::gamesense_crack.Properties.Resources.load_screen;
-            this.pic_load.Location = new System.Drawing.Point(3, 12);
+            this.pic_load.Location = new System.Drawing.Point(3, 63);
             this.pic_load.Name = "pic_load";
             this.pic_load.Size = new System.Drawing.Size(38, 51);
             this.pic_load.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
