@@ -12,16 +12,7 @@ namespace gamesense_crack
 {
     public partial class main : Form
     {
-        string dll_link = "https://github.com/DaniilWellnes/cloud_loader/raw/main/legendware.dll";
-        string dll_name = "legendware";
-        int time_to_wait = 35000;
-
-        public const int WM_NCLBUTTONDOWN = 0xA1;
-        public const int HT_CAPTION = 0x2;
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
-        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
-        public static extern bool ReleaseCapture();
+        string version = "1"; 
         public main()
         {
             InitializeComponent();
@@ -47,6 +38,7 @@ namespace gamesense_crack
             pic_load.Location = new Point(204, 160); pic_load.Size = new Size(197, 146);
             main_panel.Visible = false; main_panel.Enabled = false;
             cheat_load.Enabled = false; cheat_load.Text = "START LOAD";
+
             sub_expires_in.Text = "LIFETIME";
 
             cheat_undetect.Enabled = false; cheat_undetect.Visible = false;
@@ -56,13 +48,15 @@ namespace gamesense_crack
             pic_icon.Enabled = false; pic_icon.Visible = false;
             close_skeet.Visible = false; close_skeet.Enabled = false;
 
+            cheat_load.Visible = false; cheat_load.Enabled = false;
+
             WebClient w_cheat_status_text = new WebClient();
             WebClient w_last_upd_date = new WebClient();
             last_upd.Text = w_last_upd_date.DownloadString("https://raw.githubusercontent.com/DaniilWellnes/gamesense_crack_loader/main/addition/data.txt");
             string cheat_status_text = w_cheat_status_text.DownloadString("https://raw.githubusercontent.com/DaniilWellnes/gamesense_crack_loader/main/addition/cheat_status.txt");
             if (cheat_status_text.Contains("0"))
             {
-                cheat_status.Text = "UNDETECT"; cheat_status.ForeColor = System.Drawing.Color.Green;
+                cheat_status.Text = "UNDETECT"; cheat_status.BackColor = ForeColor = System.Drawing.Color.LimeGreen;
                 cheat_undetect.Visible = true; cheat_undetect.Enabled = true;
                 cheat_load.Enabled = true;
             }
@@ -98,7 +92,9 @@ namespace gamesense_crack
                 pic_icon.Enabled = false; pic_icon.Visible = true;
                 main_panel.Visible = true; main_panel.Enabled = true;
                 close_skeet.Visible = true; close_skeet.Enabled = true;
-            }
+                cheat_load.Visible = true;
+
+            } timer2.Stop();
         }
 
         private void pic_load_Click(object sender, EventArgs e)
@@ -135,8 +131,8 @@ namespace gamesense_crack
         {
             cheat_load.Enabled = false;
             cheat_load.Text = "Inject...";
-
-            WebClient wb = new WebClient();
+            await Task.Delay(4000);
+            /*WebClient wb = new WebClient();
             string mainpath = "C:\\" + dll_name + ".dll";
             wb.DownloadFile(dll_link, mainpath);
 
@@ -163,7 +159,12 @@ namespace gamesense_crack
                 var main = new error();
                 main.Closed += (s, args) => this.Close();
                 main.Show();
-            }
+            }*/
+
+            this.Hide();
+            var main = new loading();
+            main.Closed += (s, args) => this.Close();
+            main.Show();
         }
 
         private void timer1_Tick(object sender, EventArgs e)

@@ -83,7 +83,7 @@ namespace gamesense_crack
             this.cheat_load.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
             this.cheat_load.Image = null;
             this.cheat_load.ImageSize = new System.Drawing.Size(20, 20);
-            this.cheat_load.Location = new System.Drawing.Point(89, 264);
+            this.cheat_load.Location = new System.Drawing.Point(129, 387);
             this.cheat_load.Name = "cheat_load";
             this.cheat_load.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(175)))), ((int)(((byte)(110)))));
             this.cheat_load.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -287,7 +287,7 @@ namespace gamesense_crack
             this.close_skeet.ForeColor = System.Drawing.Color.White;
             this.close_skeet.Image = null;
             this.close_skeet.ImageSize = new System.Drawing.Size(20, 20);
-            this.close_skeet.Location = new System.Drawing.Point(521, 66);
+            this.close_skeet.Location = new System.Drawing.Point(521, 73);
             this.close_skeet.Name = "close_skeet";
             this.close_skeet.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(24)))), ((int)(((byte)(38)))));
             this.close_skeet.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -354,23 +354,22 @@ namespace gamesense_crack
             // 
             // main_panel
             // 
-            this.main_panel.BackgroundImage = global::gamesense_crack.Properties.Resources.text_background;
+            this.main_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
             this.main_panel.Controls.Add(this.gunaSeparator1);
-            this.main_panel.Controls.Add(this.cheat_load);
             this.main_panel.Controls.Add(this.gunaPanel2);
             this.main_panel.Controls.Add(this.gunaPanel1);
             this.main_panel.Controls.Add(this.gunaPanel4);
             this.main_panel.Controls.Add(this.gunaPanel3);
             this.main_panel.Location = new System.Drawing.Point(44, 114);
             this.main_panel.Name = "main_panel";
-            this.main_panel.Size = new System.Drawing.Size(539, 337);
+            this.main_panel.Size = new System.Drawing.Size(539, 238);
             this.main_panel.TabIndex = 6;
             // 
             // pic_load
             // 
-            this.pic_load.BackgroundImage = global::gamesense_crack.Properties.Resources.text_background;
+            this.pic_load.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(15)))), ((int)(((byte)(27)))));
             this.pic_load.Image = global::gamesense_crack.Properties.Resources.load_screen;
-            this.pic_load.Location = new System.Drawing.Point(220, 29);
+            this.pic_load.Location = new System.Drawing.Point(3, 22);
             this.pic_load.Name = "pic_load";
             this.pic_load.Size = new System.Drawing.Size(38, 51);
             this.pic_load.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -390,6 +389,7 @@ namespace gamesense_crack
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::gamesense_crack.Properties.Resources.text_background;
             this.ClientSize = new System.Drawing.Size(618, 493);
+            this.Controls.Add(this.cheat_load);
             this.Controls.Add(this.pic_load);
             this.Controls.Add(this.main_panel);
             this.Controls.Add(this.close_skeet);
@@ -398,7 +398,7 @@ namespace gamesense_crack
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "gamesense";
+            this.Text = "gamesense crack";
             this.Load += new System.EventHandler(this.main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_icon)).EndInit();
             this.gunaPanel1.ResumeLayout(false);
