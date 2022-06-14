@@ -60,7 +60,7 @@ namespace gamesense_crack
             {
                 timer1.Stop();
                 this.Hide();
-                var load = new main();
+                var load = new vhod();
                 load.Closed += (s, args) => this.Close();
                 load.Show();
             }
