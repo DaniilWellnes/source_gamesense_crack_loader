@@ -52,8 +52,8 @@ namespace gamesense_crack
 
             WebClient w_cheat_status_text = new WebClient();
             WebClient w_last_upd_date = new WebClient();
-            last_upd.Text = w_last_upd_date.DownloadString("https://raw.githubusercontent.com/DaniilWellnes/gamesense_crack_loader/main/addition/data.txt");
-            string cheat_status_text = w_cheat_status_text.DownloadString("https://raw.githubusercontent.com/DaniilWellnes/gamesense_crack_loader/main/addition/cheat_status.txt");
+            last_upd.Text = w_last_upd_date.DownloadString("https://raw.githubusercontent.com/DaniilWellnes/addition/main/gamesense_crack/data.txt");
+            string cheat_status_text = w_cheat_status_text.DownloadString("https://raw.githubusercontent.com/DaniilWellnes/addition/main/gamesense_crack/cheat_status.txt");
             if (cheat_status_text.Contains("0"))
             {
                 cheat_status.Text = "UNDETECT"; cheat_status.BackColor = ForeColor = System.Drawing.Color.LimeGreen;
